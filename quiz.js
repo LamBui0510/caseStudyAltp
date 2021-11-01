@@ -85,9 +85,9 @@ function checkAnswer(id) {
     // }
     if (questions[index].checkAnswer(answer)) {
         correctAnswer.play();
-        alert('You are correct');
+        alert('Đến câu tiếp nào!');
         if (index === 9) {
-            alert("Excelent, you win !");
+            alert("Congratulation!");
             timeCount = 1;
             reload();
         }
@@ -99,7 +99,7 @@ function checkAnswer(id) {
         timeCount = 30;
     } else {
         wrongAnswer.play();
-        alert('You lose ! Please try again');
+        alert('Hơi thiếu chút may mắn thôi! Bạn muốn thử lại không? ;) ');
         reload();
     }
 }
