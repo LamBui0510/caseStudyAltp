@@ -44,16 +44,16 @@ function countdown() {
 
 }
 
-let question10 = new Question("Câu 10:Điền từ còn thiếu vào chỗ trống trong câu: ”Gần mực thì đen, gần đèn thì …”? ", ["A.Rạng", "B.Lóa", "C.Chói", "D.Mù"], "A.Rạng", "10");
-let question9 = new Question("Câu 9:Thứ giết chết chúng ta là ..", ["A.Quá Khứ", "B.Ký ức", "C.Kỷ niệm", "D.Dao phóng lợn"], "D.Dao phóng lợn", "20");
-let question8 = new Question("Câu 8:Đâu là tên người làm quiz?", ["A.Tài", "B.Hải", "C.Đạt", "D.Lâm"], "B.Hải", "40");
-let question7 = new Question("Câu 7:Sóng bắt đầu từ gió, gió bắt đầu từ đâu?", ["A.Em cũng không biết nữa", "B.Chênh lệch khí áp", "C.Mưa", "D.Sương Mù"], "B.Chênh lệch khí áp", "70");
-let question6 = new Question("Câu 6:Mưa ngâu là vào khoảng tháng mấy trong năm?", ["A.Tháng 1 âm", "B.Tháng 3 âm", "C.Tháng 5 âm", "D.Tháng 7 âm"], "D.Tháng 7 âm", "100");
-let question5 = new Question("Câu 5:Trong truyện Kiều, khi gặp Thúy Kiều lần đầu tiên, Kim Trọng cưỡi ngựa gì?", ["A.Xích Thố", "B.Ngựa Ô", "C.Bạch mã", "D.Ngựa vằn"], "C. Bạch mã", "100");
+let question10 = new Question("Câu 10:Điền từ còn thiếu vào chỗ trống trong câu: ”Gần mực thì đen, gần đèn thì …”? ", ["A.Rạng", "B.Lóa", "C.Chói", "D.Mù"], "A.Rạng", "300");
+let question9 = new Question("Câu 9:Thứ giết chết chúng ta là ..", ["A.Quá Khứ", "B.Ký ức", "C.Kỷ niệm", "D.Dao phóng lợn"], "D.Dao phóng lợn", "250");
+let question8 = new Question("Câu 8:Đâu là tên người làm quiz?", ["A.Tài", "B.Hải", "C.Đạt", "D.Lâm"], "D.Lâm", "200");
+let question7 = new Question("Câu 7:Sóng bắt đầu từ gió, gió bắt đầu từ đâu?", ["A.Em cũng không biết nữa", "B.Chênh lệch khí áp", "C.Mưa", "D.Sương Mù"], "B.Chênh lệch khí áp", "170");
+let question6 = new Question("Câu 6:Mưa ngâu là vào khoảng tháng mấy trong năm?", ["A.Tháng 1 âm", "B.Tháng 3 âm", "C.Tháng 5 âm", "D.Tháng 7 âm"], "D.Tháng 7 âm", "150");
+let question5 = new Question("Câu 5:Trong truyện Kiều, khi gặp Thúy Kiều lần đầu tiên, Kim Trọng cưỡi ngựa gì?", ["A.Xích Thố", "B.Ngựa Ô", "C.Bạch mã", "D.Ngựa vằn"], "C.Bạch mã", "120");
 let question4 = new Question("Câu 4:Phủ Tây Hồ hiện nay thờ ai?", ["A.Chử Đồng Tử", "B.Mẫu Liễu Hạnh", "C.Thánh Gióng", "D.Thạch Sanh"], "B.Mẫu Liễu Hạnh", "100");
-let question3 = new Question("Câu 3:Họa sĩ nào sau đây không phải người Ý?", ["A.Pablo Picasso", "B.Leonardo De Vinci", "C.Michelagelo", "D.Rafaelo"], "A.Pablo Picasso", "100");
-let question2 = new Question("Câu 2:CodeGym thành lập năm bao nhiêu?", ["A.2018", "B.2019", "C.2017", "D.2020"], "C.2017", "100");
-let question1 = new Question("Câu 1:What is dominant color of CodeGym?", ["A.Purple", "B.Red", "C.Orange", "D.Blue"], "D.Blue", "100");
+let question3 = new Question("Câu 3:Họa sĩ nào sau đây không phải người Ý?", ["A.Pablo Picasso", "B.Leonardo De Vinci", "C.Michelagelo", "D.Rafaelo"], "A.Pablo Picasso", "50");
+let question2 = new Question("Câu 2:CodeGym thành lập năm bao nhiêu?", ["A.2018", "B.2019", "C.2017", "D.2020"], "C.2017", "20");
+let question1 = new Question("Câu 1:What is dominant color of CodeGym?", ["A.Purple", "B.Red", "C.Orange", "D.Blue"], "D.Blue", "10");
 
 let questions = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
 let getQuestion = document.getElementById('question');
@@ -61,7 +61,7 @@ showQuestion(question1);
 
 function next(index) {
     index++;
-    showQuestion(questions[index]);
+    showQuestion(questions[index]); 
 }
 
 function showQuestion(question_1) { // tham so question_1 la 1
@@ -86,7 +86,7 @@ function checkAnswer(id) {
     if (questions[index].checkAnswer(answer)) {
         correctAnswer.play();
         alert('You are correct');
-        if (index === 14) {
+        if (index === 9) {
             alert("Excelent, you win !");
             timeCount = 1;
             reload();
